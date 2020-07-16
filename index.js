@@ -76,10 +76,15 @@ console.log(juliusReview)
 // console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
-function addRevier(arr, name, rating, feedback) {
-   arr.push({name, rating, feedback});
-}
-console.log(reviews, 'Matthew', 4.3, 'It was food. Cannot deny that')
+
+
+// function addRevier(arr, name, rating, feedback) { 
+//   return arr.push({name, rating, feedback});
+// }
+// addRevier(reviews, 'Matthew', 4.3, 'It was food. Cannot deny that')
+// console.log(reviews)
+
+reviews.push({name:'Matthew', rating:4.3, feedback:'It was food. Cannot deny that'})
 
 
 
@@ -90,7 +95,7 @@ function changeReview(arr, i, feedback){
   arr[i].feedback = feedback;
   return arr
 }
-console.log(changeReview(reviews, [7], 'this place is chill with really cool people, great for getting work done on weekdays'))
+console.log(changeReview(reviews, [7], 'this place is chill with really cool people, great for getting work done on weekdays'));
 
 
 
@@ -107,10 +112,12 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * For example, if getReviewByIndex is invoked with reviews and the number 0
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
+
 function getReviewByIndex(reviews, index) {
-  return '${name} gave the restaurant a ${rating} and their feedback was: ${feedback}'
+  let reviewByIndex = reviews[index]
+  return `${reviewByIndex.name} gave the restaurant a ${reviewByIndex.rating}, and their feedback was: ${reviewByIndex.feedback}`
 }
-console.log(getLastReview(reviews[5]));
+console.log(getReviewByIndex(reviews, 3));
   
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
@@ -123,7 +130,7 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
 function getLastReview(arr) {
-
+  
 } 
 
 
