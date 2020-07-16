@@ -33,10 +33,17 @@ const burger = {
   name: "Burger", 
   price: 18, 
   category: "Lunch",
-  discount: function teacherDiscount(params) {
-    
+  lunchSpecial: function(patron) {
+    if(patron === 'teacher' || patron === 'student') {
+      return this.price * .75;
+    } else {
+      return this.price * .90;
+    }
   }
-};
+}
+console.log(burger.lunchSpecial('teacher'));
+console.log(burger.lunchSpecial('student'));
+console.log(burger.lunchSpecial('averagejoe'));
 
 
 
@@ -56,6 +63,9 @@ const reviews = [{name: "Daniela", rating: 5, feedback:"Beautiful atmosphere and
 
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
+function addRevier(arr, name, rating, feedback) {
+  
+}
 
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays"
