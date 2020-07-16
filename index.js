@@ -63,15 +63,17 @@ const reviews = [
 /* Task 3: Console.log just Julius' feedback */
 
 
-// // first attempt, couldn't make it work.
-// const juliusReview = [];
-// for (let i = 0; i > reviews.length; i++){
-//   if(reviews[i].name === "Julius"){
-//     juliusReview.push(review[i].feedback)
-//   }
-// }
+// first attempt, couldn't make it work.
+const juliusReview = [];
 
-console.log(reviews[5].feedback);
+for (let i = 0; i < reviews.length; i++){
+  if(reviews[i].name === "Julius"){
+    juliusReview.push(reviews[i].feedback)
+  }
+}
+console.log(juliusReview)
+
+// console.log(reviews[5].feedback);
 
 /* Task 4: Add a new rating with your (fictitious) opinions of the restaurant in the same format as the reviews above. */
 function addRevier(arr, name, rating, feedback) {
@@ -82,6 +84,7 @@ console.log(reviews, 'Matthew', 4.3, 'It was food. Cannot deny that')
 
 
 /* Task 5: Add the following feedback to Reyna's rating - "this place is chill with really cool people, great for getting work done on weekdays" */
+
 
 function changeReview(arr, i, feedback){
   arr[i].feedback = feedback;
@@ -105,8 +108,9 @@ and should return a string in the format `{name} gave the restaurant a {rating},
  * it will return `Daniela gave the restaurant a 5 star review and their feedback was: Beautiful atmosphere and wonderful vegan options!`
 */
 function getReviewByIndex(reviews, index) {
-    /* code here */
-  }
+  return '${name} gave the restaurant a ${rating} and their feedback was: ${feedback}'
+}
+console.log(getLastReview(reviews[5]));
   
 
 /* Task 7: Write a function to get information about the most recent review called `getLastReview`
@@ -118,9 +122,9 @@ and should return a string in the format `name} gave the restaurant a {rating}, 
 
 For example, if getLastReview is invoked passing the reviews array it will return `Reyna gave the restaurant a 3.5 star review and their feedback was: "this place is chill with really cool people, great for getting work done on weekdays"`.
 */
-function getLastReview(/* code here */) {
-    /* code here */
-  } 
+function getLastReview(arr) {
+
+} 
 
 
 ///////////////🍔☕️🍽 STRETCH🍔☕️🍽////////////////////
